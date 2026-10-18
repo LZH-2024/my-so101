@@ -1,0 +1,9 @@
+.venv\Scripts\python.exe -m lerobot.scripts.lerobot_train ^
+  --dataset.repo_id=local/wrist_demo_001 ^
+  --dataset.root=data/wrist_demo_001 ^
+  --policy.type=act ^
+  --output_dir=outputs/train/act_so101_test ^
+  --job_name=act_so101_test ^
+  --policy.device=cuda ^
+  --wandb.enable=false ^
+  --policy.push_to_hub=false

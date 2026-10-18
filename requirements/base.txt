@@ -1,6 +1,6 @@
 
-# LeRobot: robot control, recording, datasets, visualization
-lerobot[core_scripts,feetech]==0.6.1
+# LeRobot: robot control, recording, datasets, visualization, training
+lerobot[core_scripts,feetech,training]==0.6.1
 
 # Project configuration
 PyYAML==6.0.3
