@@ -1,0 +1,17 @@
+dataset:
+  repo_id: local/wrist_demo_001
+  root: data/wrist_demo_001
+  single_task: "Pick up the cube and place it in the box."
+  fps: 20
+  num_episodes: 10
+  episode_time_s: 60
+  reset_time_s: 60
+  video: true
+  rgb_encoder:
+    vcodec: h264
+  push_to_hub: false            # 仅保存到本地，不上传 Hub
+  no_stamp: true                # 不给 repo_id 自动追加时间戳
+
+resume: false                  # 新建用 false；续录用 true 并保持原数据集配置
+display_data: false            # 关闭可视化，不影响图像录制
+play_sounds: false             # 关闭语音提示，请留意终端状态

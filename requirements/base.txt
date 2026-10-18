@@ -1,0 +1,18 @@
+
+# LeRobot: robot control, recording, datasets, visualization
+lerobot[core_scripts,feetech]==0.6.1
+
+# Project configuration
+PyYAML==6.0.3
+
+# Hardware
+feetech-servo-sdk==1.0.0
+pyserial==3.5
+
+# Camera and numerical processing
+opencv-python-headless==4.13.0.92
+numpy==2.2.6
+
+# Video encoding / decoding
+av==15.1.0
+torchcodec==0.10.0
