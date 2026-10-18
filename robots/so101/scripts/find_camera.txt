@@ -1,0 +1,4 @@
+.venv\Scripts\lerobot-find-cameras.exe opencv ^
+  --output-dir "outputs\captured_images" ^
+  --record-time-s 2 ^
+  --warmup-s 1

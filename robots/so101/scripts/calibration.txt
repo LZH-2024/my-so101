@@ -1,0 +1,17 @@
+rem 主臂校准：单独复制执行下面这一条命令。
+.venv\Scripts\lerobot-calibrate.exe ^
+  --teleop.type=so101_leader ^
+  --teleop.port=COM4 ^
+  --teleop.id=leader01 ^
+  --teleop.calibration_dir=robots/so101/calibration/leader ^
+  --teleop.use_degrees=true
+
+rem 从臂校准：单独复制执行下面这一条命令。
+.venv\Scripts\lerobot-calibrate.exe ^
+  --robot.type=so101_follower ^
+  --robot.port=COM5 ^
+  --robot.id=follower01 ^
+  --robot.calibration_dir=robots/so101/calibration/follower ^
+  --robot.use_degrees=true ^
+  --robot.disable_torque_on_disconnect=true ^
+  --robot.max_relative_target=null

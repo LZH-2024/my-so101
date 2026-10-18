@@ -17,3 +17,5 @@ numpy==2.2.6
 # TorchCodec 0.7 matches PyTorch 2.8 and requires FFmpeg 4-7 shared libraries.
 av==15.1.0
 torchcodec==0.7.0
+
+rerun-sdk==0.33.1
