@@ -1,5 +1,5 @@
 # Windows NVIDIA GPU; selected for this machine's RTX 3060 12 GB.
 # Install this file first; install base.txt separately from PyPI afterward.
 --index-url https://download.pytorch.org/whl/cu128
-torch==2.10.0+cu128
-torchvision==0.25.0+cu128
+torch==2.8.0+cu128
+torchvision==0.23.0+cu128
