@@ -3,7 +3,7 @@ dataset:
   root: data/wrist_demo_001
   single_task: "Pick up the cube and place it in the box."
   fps: 20
-  num_episodes: 10
+  num_episodes: 50
   episode_time_s: 60
   reset_time_s: 60
   video: true

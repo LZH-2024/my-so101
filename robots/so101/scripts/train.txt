@@ -2,8 +2,10 @@
   --dataset.repo_id=local/wrist_demo_001 ^
   --dataset.root=data/wrist_demo_001 ^
   --policy.type=act ^
-  --output_dir=outputs/train/act_so101_test ^
-  --job_name=act_so101_test ^
+  --output_dir=outputs/train/act_so101_test_001 ^
+  --job_name=act_so101_test_001 ^
   --policy.device=cuda ^
-  --wandb.enable=false ^
+  --wandb.enable=true ^
   --policy.push_to_hub=false
+  --batch_size=24
+  --steps=200000

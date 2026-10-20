@@ -1,0 +1,44 @@
+.venv\Scripts\python.exe -m lerobot.scripts.lerobot_rollout ^
+  --strategy.type=base ^
+  --policy.path=outputs/train/act_so101_test_002/checkpoints/100000/pretrained_model ^
+  --policy.device=cuda ^
+  --robot.type=so101_follower ^
+  --robot.port=COM5 ^
+  --robot.id=follower01 ^
+  --robot.calibration_dir=robots/so101/calibration/follower ^
+  --robot.use_degrees=true ^
+  --robot.disable_torque_on_disconnect=true ^
+  --robot.max_relative_target=null ^
+  "--robot.cameras={wrist: {type: opencv, index_or_path: 1, width: 640, height: 480, fps: 30}, front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" ^
+  --fps=20 ^
+  --duration=60 ^
+  "--task=Pick up the cube and place it in the box." ^
+  --display_data=false
+
+
+.venv\Scripts\python.exe -m lerobot.scripts.lerobot_rollout ^
+  --strategy.type=episodic ^
+  --policy.path=outputs/train/act_so101_test_002/checkpoints/100000/pretrained_model ^
+  --policy.device=cuda ^
+  --robot.type=so101_follower ^
+  --robot.port=COM5 ^
+  --robot.id=follower01 ^
+  --robot.calibration_dir=robots/so101/calibration/follower ^
+  --robot.use_degrees=true ^
+  --robot.disable_torque_on_disconnect=true ^
+  --robot.max_relative_target=null ^
+  "--robot.cameras={wrist: {type: opencv, index_or_path: 1, width: 640, height: 480, fps: 30}, front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" ^
+  --fps=20 ^
+  --dataset.repo_id=local/rollout_act002_test01 ^
+  --dataset.root=data/rollout_act002_test01 ^
+  "--dataset.single_task=Pick up the cube and place it in the box." ^
+  --dataset.fps=20 ^
+  --dataset.num_episodes=1 ^
+  --dataset.episode_time_s=60 ^
+  --dataset.video=true ^
+  --dataset.rgb_encoder.vcodec=h264 ^
+  --dataset.push_to_hub=false ^
+  --dataset.no_stamp=true ^
+  --resume=false ^
+  --display_data=false ^
+  --play_sounds=false
