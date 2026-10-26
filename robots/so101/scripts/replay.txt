@@ -1,0 +1,16 @@
+.venv\Scripts\python.exe -m lerobot.scripts.lerobot_dataset_viz ^
+  --repo-id local/wrist_demo_003 ^
+  --root data/wrist_demo_003 ^
+  --episode-index 49
+
+.venv\Scripts\python.exe -m lerobot.scripts.lerobot_replay ^
+  --robot.type=so101_follower ^
+  --robot.port=COM5 ^
+  --robot.id=follower01 ^
+  --robot.calibration_dir=robots/so101/calibration/follower ^
+  --robot.use_degrees=true ^
+  --robot.disable_torque_on_disconnect=true ^
+  --dataset.repo_id=local/wrist_demo_003 ^
+  --dataset.root=data/wrist_demo_003 ^
+  --dataset.episode=49 ^
+  --play_sounds=false

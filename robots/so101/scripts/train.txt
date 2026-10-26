@@ -1,11 +1,15 @@
 .venv\Scripts\python.exe -m lerobot.scripts.lerobot_train ^
-  --dataset.repo_id=local/wrist_demo_001 ^
-  --dataset.root=data/wrist_demo_001 ^
+  --dataset.repo_id=local/wrist_demo_004 ^
+  --dataset.root=data/wrist_demo_004 ^
   --policy.type=act ^
-  --output_dir=outputs/train/act_so101_test_001 ^
-  --job_name=act_so101_test_001 ^
+  --output_dir=outputs/train/act_so101_test_004_02 ^
+  --job_name=act_so101_test_004 ^
   --policy.device=cuda ^
-  --wandb.enable=true ^
-  --policy.push_to_hub=false
-  --batch_size=24
-  --steps=200000
+  --wandb.enable=false ^
+  --policy.push_to_hub=false ^
+  --steps=100000
+
+  .venv\Scripts\python.exe -m lerobot.scripts.lerobot_train ^
+  --config_path=outputs/train/act_so101_test_004/checkpoints/010000/pretrained_model/train_config.json ^
+  --resume=true ^
+  --steps=20000
